@@ -9,6 +9,7 @@
   width: 100%;
   height: 80px;
   top: 0;
+  border-bottom: 1px solid rgb(99, 98, 98);
 }
 #logo {
   margin-left: 70px;
@@ -26,20 +27,31 @@
 
 .header a {
   text-decoration: none;
-  color: #0068b6;
+  color: #56768a;
   font-size: 20px;
   font-weight: 400;
 }
 a:hover {
-  color: #56768a;
+  color: #0068b6;
+}
+.booknowbutoni {
+  width: 100px;
+  height: 35px;
+  background-color: #0068b6;
+  border-radius: 25px;
+  border: 0px;
+  color: white;
+  outline: none;
+  position: absolute;
+  right: 50px;
 }
 
-.loginnav:visited {
+.loginnav {
   color: #0068b6;
 }
 .logindiv {
   width: 100%;
-  height: 87vh;
+  height: 80vh;
   display: flex;
   align-items: center;
 }
@@ -88,41 +100,4 @@ a:hover {
 }
 .logincontent a {
   text-decoration: none;
-}
-.footer {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 400px;
-  background-color: #56768a;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.contact {
-  width: 350px;
-  height: 200px;
-}
-.thankyou {
-  width: 350px;
-  height: 200px;
-}
-.photofooter {
-  width: 100px;
-}
-.photo {
-  margin-top: 20px;
-}
-.tekstfooter {
-  position: absolute;
-  top: 100px;
-  left: 200px;
-  width: 200px;
-  height: 200px;
-  text-align: center;
-}
-.tekstfooter h3 {
-  margin-top: 20px;
-  font-weight: 400;
 }

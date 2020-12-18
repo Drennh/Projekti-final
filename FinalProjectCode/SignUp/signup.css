@@ -6,15 +6,16 @@
 }
 .header {
   display: flex;
-  background-color: #56768a;
   width: 100%;
   height: 80px;
   top: 0;
+  border-bottom: 1px solid rgb(99, 98, 98);
 }
 #logo {
   margin-left: 70px;
   margin-top: 20px;
-  margin-bottom: 25px;
+  width: 50px;
+  height: 40px;
 }
 .header li {
   display: inline;
@@ -26,31 +27,42 @@
 
 .header a {
   text-decoration: none;
-  color: white;
+  color: #0068b6;
   font-size: 20px;
-  font-weight: lighter;
+  font-weight: 400;
 }
 a:hover {
   color: #56768a;
 }
-.logindiv {
+.booknowbutoni {
+  width: 100px;
+  height: 35px;
+  background-color: #0068b6;
+  border-radius: 25px;
+  border: 0px;
+  color: white;
+  outline: none;
+  position: absolute;
+  right: 50px;
+}
+.signupdiv {
   width: 100%;
-  height: 120vh;
+  height: 95vh;
   display: flex;
   margin-top: 70px;
 }
-.logincontent {
+.signupcontent {
   width: 450px;
   height: 350px;
   margin: 0 auto;
   text-align: center;
 }
-.logincontent h1 {
+.signupcontent h1 {
   font-size: 50px;
   font-weight: 600;
   color: #56768a;
 }
-.logincontent input {
+.signupcontent input {
   border: 0px;
   border-bottom: 2px solid #56768a;
   width: 450px;
@@ -63,7 +75,7 @@ a:hover {
 .email {
   font-size: 100px;
 }
-.loginbutton {
+.signupbutton {
   margin-top: 30px;
   width: 300px;
   height: 60px;
@@ -79,44 +91,4 @@ a:hover {
   color: #3d514d;
   text-align: left;
   font-size: 13px;
-}
-.logincontent a {
-  text-decoration: none;
-}
-.footer {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 400px;
-  background-color: #56768a;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.contact {
-  width: 350px;
-  height: 200px;
-}
-.thankyou {
-  width: 350px;
-  height: 200px;
-}
-.photofooter {
-  width: 100px;
-}
-.photo {
-  margin-top: 20px;
-}
-.tekstfooter {
-  position: absolute;
-  top: 100px;
-  left: 200px;
-  width: 200px;
-  height: 200px;
-  text-align: center;
-}
-.tekstfooter h3 {
-  margin-top: 20px;
-  font-weight: 400;
 }
