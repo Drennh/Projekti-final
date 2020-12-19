@@ -29,7 +29,9 @@
             <input type="email" name="email" placeholder="Email" name="" id="Email">
 
             <div id="email_error">Please fill up your Email</div>
-            <input type="tel" placeholder="Phone Numer" name="phone" id="phonenumber">
+            <input type="tel" placeholder="Phone Numer" name="phone" id="phonenumber"pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+            required
+            title=" Number must have this form : XXX-XXX-XXX">
 
             <div id="phone_error">Please fill up your Phone Number</div>
             <input type="password" placeholder="Password" name="password" id="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
