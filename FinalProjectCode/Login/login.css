@@ -83,7 +83,7 @@ a:hover {
   margin-top: 10px;
   color: #3d514d;
 }
-.loginbutton {
+.login_form button {
   margin-top: 30px;
   width: 250px;
   height: 40px;
@@ -100,4 +100,12 @@ a:hover {
 }
 .logincontent a {
   text-decoration: none;
+}
+.login_form #email_error,
+.login_form #pass_error {
+  display: flex;
+  opacity: 80%;
+  font-size: 12px;
+  color: #c62828;
+  opacity: 0;
 }

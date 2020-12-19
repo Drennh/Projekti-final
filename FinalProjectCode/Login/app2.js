@@ -1,19 +1,40 @@
-const email = document.querySelector('#email');
-const password = document.querySelector('#password');
-const LogIn = document.querySelector('.LogIn');
-const loginbutton = document.querySelector('.loginbutton');
-const signup = document.querySelector('.signup');
-const passwordforgotten = document.querySelector('.passwordforgotten');
+//Validation code for inputs
 
+var email = document.forms['form']['email'];
+var password = document.forms['form']['password'];
 
+var email_error = document.getElementById('email_error');
+var pass_error = document.getElementById('pass_error');
 
-const tl  = new TimelineMax();
+email.addEventListener('textInput',email_Verify);
+password.addEventListener('textInput',pass_Verify);
 
+function validated(){
+    if(email.value.length<9){
+        email.style.borderBottomColor = "red";
+        email_error.style.opacity="1";
+        email.focus();
+        return false;
+    }
+    if(password.value.length<6){
+        password.style.borderBottomColor = "red";
+        pass_error.style.opacity="1";
+        password.focus();
+        return false;
+    }
+}
+function email_Verify(){
+    if(email.value.length>=8){
+        email.style.borderBottomColor = "#56768a";
+        email_error.style.display="none";
+        return true;
+    }
+}
 
-tl.fromTo(email,1, {y:"+15%",opacity:0}, {y:"0%",opacity:1, ease:Power2.easeInOut})
-.fromTo(password, 1 ,{y:"-15%",opacity:0}, {y:"0%",opacity:1, ease:Power2.easeInOut},"-=1")
-.fromTo(LogIn, 0.7 ,{y:"-10%",opacity:0}, {y:"0%",opacity:1, ease:Power2.easeInOut},"-=0.7")
-.fromTo(loginbutton, 1 ,{opacity:0.7}, {opacity:1, ease:Power2.easeInOut},"-=1.5")
-.fromTo(signup, 1 ,{opacity:0.5}, {opacity:1, ease:Power2.easeInOut},"-=1.2")
-.fromTo(passwordforgotten, 1 ,{opacity:0.5}, {opacity:1, ease:Power2.easeInOut},"-=1.2")
-
+function pass_Verify(){
+    if(password.value.length>=6){
+        password.style.borderBottomColor = "#56768a";
+        pass_error.style.display="none";
+        return true;
+    }
+}
