@@ -17,25 +17,29 @@
           </div>
           <div class="rightside">
             <h1 class="booknow">Book Now</h1>
-           <div class="indiv" id="div1">
             <form class="signup_form" method="post" name="form" onsubmit="return validated()" action="../Login/login.html">
+           <div class="indiv" id="div1">
+
 
             <input class="description" type="text" name="name1" placeholder="Full Name">
+            <div id="fullname_error">Please fill up your Full Name</div>
             </div>
             <!--Different Div-->
             <div class="indiv" id="div2">
-    
                <input class="description" type="tel" name="phone" placeholder="Phone Number">
+               <div id="phone_error">Please fill up your Phone Number</div>
                 </div>
                 <!--Different Div-->
                  <div class="indiv" id="div3">
                     
                     <input class="description" type="email" name="email" placeholder="Email">
+                    <div id="email_error">Please fill up your Email</div>
                     </div>
                     <!--Different Div-->
                    <div class="indiv" id="div4">
                     <form action="/action_page.php">
                         <input class="description" type="date" id="bookdate" name="Book Date">
+                        <div id="date_error">Please fill up the date you want to book</div>
                       </form>
                         </div>
                         <a href=""><button class="bookNowButoni">Book Now</button></a>

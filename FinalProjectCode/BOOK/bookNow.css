@@ -77,3 +77,13 @@ label {
   font-size: 15px;
   outline: none;
 }
+.signup_form #fullname_error,
+.signup_form #email_error,
+.signup_form #phone_error,
+.signup_form #date_error {
+  display: flex;
+  opacity: 80%;
+  font-size: 12px;
+  color: #c62828;
+  opacity: 1;
+}
