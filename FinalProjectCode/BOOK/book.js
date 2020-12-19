@@ -1,3 +1,24 @@
+const booknow = document.querySelector('.booknow');
+const div1 = document.querySelector('#div1');
+const div2 = document.querySelector('#div2');
+const div3 = document.querySelector('#div3');
+const div4 = document.querySelector('#div4');
+const butoni = document.querySelector('#butoni');
+
+
+
+const tl  = new TimelineMax();
+
+
+tl.fromTo(booknow,1, {x:"+10%",opacity:0}, {x:"0%",opacity:1, ease:Power2.easeInOut})
+.fromTo(div1,1, {x:"+10%",opacity:0}, {x:"0%",opacity:1, ease:Power2.easeInOut},"-=1.1")
+.fromTo(div2,1, {x:"+10%",opacity:0}, {x:"0%",opacity:1, ease:Power2.easeInOut},"-=1.2")
+.fromTo(div3,1, {x:"+10%",opacity:0}, {x:"0%",opacity:1, ease:Power2.easeInOut},"-=1.2")
+.fromTo(div4,1, {x:"+10%",opacity:0}, {x:"0%",opacity:1, ease:Power2.easeInOut},"-=1.2")
+.fromTo(butoni,1, {x:"+7%",opacity:0}, {x:"0%",opacity:1, ease:Power2.easeInOut},"-=1.2")
+
+
+
 var name1 = document.forms['form']['name1'];
 var phone = document.forms['form']['phone'];
 var email = document.forms['form']['email'];
