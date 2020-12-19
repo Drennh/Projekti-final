@@ -128,8 +128,9 @@ button:hover {
   background-repeat: no-repeat;
 }
 .photo2 {
-  background-image: url(../photos/Photo2.png);
+  background-image: url(../photos/photo3.jpg.png);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .blank {
   display: flex;
