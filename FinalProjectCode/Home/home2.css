@@ -120,14 +120,16 @@ button:hover {
 .photo1,
 .blank,
 .photo2 {
-  width: 480px;
+  width: 33.3%;
   height: 100vh;
 }
 .photo1 {
   background-image: url(../photos/Photo1.png);
+  background-repeat: no-repeat;
 }
 .photo2 {
   background-image: url(../photos/Photo2.png);
+  background-repeat: no-repeat;
 }
 .blank {
   display: flex;
