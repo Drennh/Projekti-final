@@ -29,8 +29,18 @@ function validated(){
         email.focus();
         return false;
     }
-    if(){
-        
+    
+    if(phone.value === ''){
+        phone.style.borderBottomColor = "red";
+        phone_error.style.opacity="1";
+        phone.focus();
+        return false;
+    }
+    if(password.value.length<8){
+        password.style.borderBottomColor = "red";
+        pass_error.style.opacity="1";
+        password.focus();
+        return false;
     }
 }
 function name_Verify(){
@@ -47,4 +57,20 @@ function email_Verify(){
         email_error.style.display="none";
         return true;
     }
+    
 }
+function phone_Verify(){
+    if(phone.value.length>=6){
+       phone.style.borderBottomColor = "#56768a";
+        phone_error.style.display="none";
+        return true;
+    }
+}
+function pass_Verify(){
+    if(password.value.length>=6){
+       password.style.borderBottomColor = "#56768a";
+        pass_error.style.display="none";
+        return true;
+    }
+}
+
