@@ -18,18 +18,19 @@
           <div class="rightside">
             <h1 class="booknow">Book Now</h1>
            <div class="indiv" id="div1">
+            <form class="signup_form" method="post" name="form" onsubmit="return validated()" action="../Login/login.html">
 
-            <input class="description" type="text" placeholder="Full Name">
+            <input class="description" type="text" name="name1" placeholder="Full Name">
             </div>
             <!--Different Div-->
             <div class="indiv" id="div2">
     
-               <input class="description" type="tel" placeholder="Phone Number">
+               <input class="description" type="tel" name="phone" placeholder="Phone Number">
                 </div>
                 <!--Different Div-->
                  <div class="indiv" id="div3">
                     
-                    <input class="description" type="email" placeholder="Email">
+                    <input class="description" type="email" name="email" placeholder="Email">
                     </div>
                     <!--Different Div-->
                    <div class="indiv" id="div4">
@@ -38,8 +39,9 @@
                       </form>
                         </div>
                         <a href=""><button class="bookNowButoni">Book Now</button></a>
+                      </form>
         </div>
       </main>
-    
+    <script src="book.js"></script>
 </body>
 </html>
