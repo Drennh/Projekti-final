@@ -20,13 +20,26 @@
     <div class="signupdiv">
         <div class="signupcontent">
             <h1>Create A Profile</h1>
-            <input type="text" name="" id="Name" placeholder="Full Name">
-            <input type="email" placeholder="Email" name="" id="Email">
-            <input type="tel" placeholder="Phone Numer" name="" id="phonenumber">
-            <input type="password" placeholder="Password" name="" id="Password">
-            <button class="signupbutton" >CONTINUE</button>
+            <form class="signup_form" method="post" name="form" onsubmit="return validated()">
+
+            <input type="text" name="name1" id="Name" placeholder="Full Name">
+
+            <div id="fullname_error">Please fill up your Email</div>
+
+            <input type="email" name="email" placeholder="Email" name="" id="Email">
+
+            <div id="email_error">Please fill up your Email</div>
+            <input type="tel" placeholder="Phone Numer" name="phone" id="phonenumber">
+
+            <div id="phone_error">Please fill up your Phone Number</div>
+            <input type="password" placeholder="Password" name="password" id="Password">
+
+            <div id="pass_error">Please fill up your Password</div>
+            <button class="signupbutton" type="submit">CONTINUE</button>
+            </form>
             <p class="signup">Your password must be at least 8 characters and contain at least one letter, one number, and one special character.</p>
         </div>
     </div>
+    <script src="signup.js"></script>
 </body>
 </html>

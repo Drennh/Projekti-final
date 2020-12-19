@@ -3,8 +3,9 @@
 var email = document.forms['form']['email'];
 var password = document.forms['form']['password'];
 
-var email_error = document.getElementById('email_error');
+var email_error = documeSnt.getElementById('email_error');
 var pass_error = document.getElementById('pass_error');
+ 
 
 email.addEventListener('textInput',email_Verify);
 password.addEventListener('textInput',pass_Verify);
@@ -37,4 +38,11 @@ function pass_Verify(){
         pass_error.style.display="none";
         return true;
     }
+}
+function sumbittt(){
+    if(email_Verify(listOfInput[0].value)== true){
+     return;
+    };
+    alert("Login suzzz");
+    
 }
