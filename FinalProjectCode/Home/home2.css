@@ -126,6 +126,7 @@ button:hover {
 .photo1 {
   background-image: url(../photos/Photo1.png);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .photo2 {
   background-image: url(../photos/photo3.jpg.png);
