@@ -54,6 +54,8 @@ header {
   width: 100%;
   height: 100vh;
   background-image: url(../photos/laptop.jpg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .boxes {
   position: relative;
