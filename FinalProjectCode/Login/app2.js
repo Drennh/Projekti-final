@@ -1,4 +1,3 @@
-//Validation code for inputs
 
 var email = document.forms['form']['email'];
 var password = document.forms['form']['password'];
@@ -17,7 +16,7 @@ function validated(){
         email.focus();
         return false;
     }
-    if(password.value.length<6){
+    if(password.value.length<8){
         password.style.borderBottomColor = "red";
         pass_error.style.opacity="1";
         password.focus();
