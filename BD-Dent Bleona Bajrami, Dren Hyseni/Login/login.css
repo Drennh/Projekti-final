@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.header {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  border-bottom: 1px solid rgb(99, 98, 98);
+}
+#logo {
+  margin-left: 70px;
+  margin-top: 20px;
+  width: 50px;
+  height: 40px;
+}
+.header li {
+  display: inline;
+  margin: 20px;
+}
+.header ul {
+  margin-top: 25px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #56768a;
+  font-size: 20px;
+  font-weight: 400;
+}
+a:hover {
+  color: #0068b6;
+}
+.booknowbutoni {
+  width: 100px;
+  height: 35px;
+  background-color: #0068b6;
+  border-radius: 25px;
+  border: 0px;
+  color: white;
+  outline: none;
+  position: absolute;
+  right: 50px;
+}
+
+.loginnav {
+  color: #0068b6;
+}
+.logindiv {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.logincontent {
+  width: 450px;
+  height: 350px;
+  margin: 0 auto;
+  text-align: center;
+}
+.logincontent h1 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-top: 30px;
+  color: #56768a;
+}
+.logincontent input {
+  border: 0px;
+  border-bottom: 2px solid #56768a;
+  width: 450px;
+  height: 30px;
+  margin-top: 45px;
+  outline: none;
+  font-size: 20px;
+}
+.email {
+  font-size: 100px;
+}
+.passwordforgotten {
+  margin-top: 10px;
+  color: #3d514d;
+}
+.login_form button {
+  margin-top: 30px;
+  width: 250px;
+  height: 40px;
+  background-color: #0068b6;
+  border-radius: 25px;
+  border: 0px;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+button:hover {
+  background-color: #00589b;
+}
+.signup {
+  margin-top: 10px;
+  color: #3d514d;
+}
+.logincontent a {
+  text-decoration: none;
+}
+.login_form #email_error,
+.login_form #pass_error {
+  display: flex;
+  opacity: 80%;
+  font-size: 12px;
+  color: #c62828;
+  opacity: 0;
+}
