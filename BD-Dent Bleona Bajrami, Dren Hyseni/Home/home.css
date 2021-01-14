@@ -9,7 +9,7 @@ html {
 }
 header {
   width: 100%;
-  height: 95vh;
+  height: 100vh;
 }
 #myVideo {
   position: absolute;
@@ -126,7 +126,7 @@ button:hover {
 .photo1 {
   background-image: url(../photos/Photo1.png);
   background-repeat: no-repeat;
-  background-size: cover;+
+  background-size: cover;
 }
 .photo2 {
   background-image: url(../photos/photo3.jpg.png);
@@ -202,6 +202,7 @@ button:hover {
 .headlinetext {
   font-size: 50px;
 }
+
 .book {
   width: 100%;
   height: 95vh;
@@ -234,4 +235,69 @@ button:hover {
   display: flex;
   justify-content: center;
   position: relative;
+  margin-top: 10px;
+}
+.burger {
+  margin-top: 27px;
+  display: none;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+
+  height: 100vh;
+}
+.active {
+  opacity: 1;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+}
+
+.not-active {
+  position: absolute;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#image1,
+#image2,
+#image3 {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.leftarrow {
+  position: relative;
+  top: 60vh;
+  z-index: 1000;
+  width: 20px;
+  height: 35px;
+  left: 20px;
+  cursor: pointer;
+}
+.rightarrow {
+  position: relative;
+  top: 60vh;
+  z-index: 1000;
+  width: 20px;
+  height: 35px;
+  left: 95%;
+  cursor: pointer;
+  color: white;
+}
+#image1 {
+  background-image: url(../photos/clinicnr1.png);
+}
+#image2 {
+  background-image: url(../photos/clinicnr2.png);
+}
+#image3 {
+  background-image: url(../photos/clinicnr3.png);
 }
