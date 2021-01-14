@@ -14,19 +14,57 @@
     <!--HEADER FILLIMI-->
     <div class="header">
         <img id="logo" src="../photos/LOGO2.png" alt="">
-        <ul>
-            <li><a href="../Home/home.html">Home</a></li>
-            <li><a class="services" href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="../Login/login.html">Login</a></li>
-           <a href="../Services book/servicesbook.html"> <button class="booknowbutoni">BOOK NOW</button></a>
+        <ul class="nav-Links">
+            <li><a class="NavLinks" href="../Home/home.php">Home</a></li>
+            <li><a class="NavLinks" class="services" href="#">Services</a></li>
+            <li><a class="NavLinks" href="../contact/contactUs.php">Contact</a></li>
+            <li><a class="NavLinks" href="../Login/login.php">Login</a></li>
+           <a href="../Services book/servicesbook.php"> <button class="booknowbutoni">BOOK NOW</button></a>
         </ul>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        
     </div>
      <!--HEADER MBARIMI-->
 
+
       <!--FILLIMI I KODIT PER DIV KATRORAT FOTOT DHE TEKSTET-->
     <header>
-     
+
+        <!--Kodi per responsive-->
+        <div class="responsivetxt">
+            <h1 class="servicestxt1">SERVICES</h1>
+            <p class="creative1">Lorem ipsum dolor sit amet sit <br> ipsum dolor sit amet dolor consectetur.</p>
+        </div>
+            <div class="boxes2">
+                <div class="katrori1">
+                    <img id="icons" src="../icons/check.png" alt="">
+                    <h2>Checkup</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident.</p>
+
+                </div>
+                <div class="katrori1">
+                   <img id="icons" src="../icons/dentist.png" alt="">
+                   <h2>Checkup</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident.</p>
+                </div>
+                <div class="katrori1">
+                    <img id="icons" src="../icons/root.png" alt="">
+                    <h2>Checkup</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident.</p>
+                </div>
+                <div class="katrori1">
+                    <img id="icons" src="../icons/tools.png" alt="">
+                    <h2>Checkup</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident.</p>
+                </div>
+            </div>
+         <!--Kodi per responsive Mbarimi-->
+
+
     <div class="boxes">
          <!--FILLIMI I KODIT PER DIV TEKSTIN NE TE MAJTE-->
         <div class="left">
@@ -73,5 +111,6 @@
     </header>
      <!--MBARIMI I KODIT PER DIV KATRORAT FOTOT DHE TEKSTET-->
 <script src="services.js"></script>
+<script src="../Burger js/burger.js"></script>
 </body>
 </html>
