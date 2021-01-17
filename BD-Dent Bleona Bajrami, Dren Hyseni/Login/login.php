@@ -8,37 +8,48 @@
 </head>
 <body>
     <div class="header">
+        <img class="responsivelogo" src="../photos/LOGO2.png" alt="">
         <img id="logo" src="../photos/LOGO3.png" alt="">
-        <ul>
-            <li><a href="../Home/home.html">Home</a></li>
-            <li><a href="../Services/services.html">Services</a></li>
-            <li><a href="#">Contact</a></li>
-            <li ><a href="#"class="loginnav">Login</a></li>
-            <a href="../Services book/servicesbook.html"> <button class="booknowbutoni">BOOK NOW</button></a>
+        <ul class="nav-Links">
+            <li><a class="NavLinks" href="../Home/home.php">Home</a></li>
+            <li><a class="NavLinks" href="../Services/services.php">Services</a></li>
+            <li><a class="NavLinks" href="../contact/contactUs.php">Contact</a></li>
+            <li ><a class="NavLinks" href="#"class="loginnav">Login</a></li>
+            <a href="../Services book/servicesbook.php"> <button class="booknowbutoni">BOOK NOW</button></a>
         </ul>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
     </div>
 
     <div class="logindiv">
         <div class="logincontent">
             <h1 class="LogIn">LOG IN</h1>
-            <form class="login_form" method="post" name="form" onsubmit="return validated()" action="../Home/home.html">
+            <form action="https://www.google.com" class="login_form" name="form">
             
-            <input id="email" type="email" name="email" placeholder="Email">
+            <input id="email" placeholder="Email" autocomplete="off">
+        
 
             <div id="email_error">Please fill up your Email</div>
 
-            <input  type="password" placeholder="Password" name="password">
+            <input id="password" type="password" placeholder="Password" name="password" autocomplete="off" >
+            
 
             <div id="pass_error">Please fill up your Password</div>
 
             <p class="passwordforgotten">Forgot Password?</p>
 
-            <button type="submit">LOG IN</button>
+            <button id="buttoni" type="button">LOG IN</button>
 
         </form>
-            <p class="signup">Don't have profile? <a href="../SignUp/signup.html">Sign Up</a></p>
+            <p class="signup">Don't have profile? <a href="../SignUp/signup.php">Sign Up</a></p>
         </div>
     </div>
+
     <script src="login.js"></script>
+
+
 </body>
 </html>

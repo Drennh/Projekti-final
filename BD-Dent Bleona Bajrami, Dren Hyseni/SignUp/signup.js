@@ -1,74 +1,76 @@
-var name1 = document.forms['form']['name1'];
-var email = document.forms['form']['email'];
-var phone = document.forms['form']['phone'];
-var password = document.forms['form']['password'];
+const name=document.querySelector('#Name');
+const email=document.querySelector('#Email');
+const phonenumber=document.querySelector('#phonenumber');
+const password=document.querySelector('#Password');
+const button=document.querySelector('.signupbutton');
 
-var fullname_error = document.getElementById('fullname_error');
-var email_error = document.getElementById('email_error');
-var phone_error = document.getElementById('phone_error');
-var pass_error = document.getElementById('pass_error');
- 
+const emailRegex = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
+const pwRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
 
-name1.addEventListener('textInput',name_Verify);
-email.addEventListener('textInput',email_Verify);
-phone.addEventListener('textInput',phone_Verify);
-password.addEventListener('textInput',pass_Verify);
 
-function validated(){
-    if(name1.value.length<9){
-        name1.style.borderBottomColor = "red";
+button.addEventListener('click',validimi);
+
+name.addEventListener('input',name_Verify);
+email.addEventListener('input',email_Verify);
+phonenumber.addEventListener('input',phone_Verify);
+password.addEventListener('input',password_Verify);
+
+
+function validimi(){
+    if(name.value.length==' '||name.value.length<8){
+        name.style.borderBottomColor = "red";
         fullname_error.style.opacity="1";
-        name1.focus();
-        return false;
     }
-    if(email.value.length<6){
+   if(email.value.length==' '||!emailRegex.test(email.value)){
         email.style.borderBottomColor = "red";
         email_error.style.opacity="1";
-        email.focus();
-        return false;
     }
-    
-    if(phone.value === ''){
-        phone.style.borderBottomColor = "red";
+
+     if(phonenumber.value.length==' '||phonenumber.value.length<8){
+        phonenumber.style.borderBottomColor = "red";
         phone_error.style.opacity="1";
-        phone.focus();
-        return false;
     }
-    if(password.value.length<8){
+    if(password.value.length==' '||!pwRegex.test(password.value)){
         password.style.borderBottomColor = "red";
         pass_error.style.opacity="1";
-        password.focus();
-        return false;
     }
+    if(name_Verify()&&email_Verify()&&phone_Verify&&password_Verify()){
+        window.location.href='http://localhost/Projekti-final/BD-Dent%20Bleona%20Bajrami,%20Dren%20Hyseni/Home/home.php';
+    }
+    
 }
+
 function name_Verify(){
-    if(name1.value.length>=8){
-        name1.style.borderBottomColor = "#56768a";
-        fullname_error.style.display="none";
+    if(name.value.length>=8){
+        name.style.borderBottomColor = "#56768a";
+        fullname_error.style.opacity="0";
         return true;
     }
+    return false;
 }
 
 function email_Verify(){
-    if(email.value.length>=6){
+    if(emailRegex.test(email.value)){
         email.style.borderBottomColor = "#56768a";
-        email_error.style.display="none";
+        email_error.style.opacity="0";
         return true;
     }
-    
+    return false;
 }
 function phone_Verify(){
-    if(phone.value.length>=6){
-       phone.style.borderBottomColor = "#56768a";
-        phone_error.style.display="none";
+    if(phonenumber.value.length>=9){
+        phonenumber.style.borderBottomColor = "#56768a";
+        phone_error.style.opacity="0";
         return true;
     }
+    return false;
 }
-function pass_Verify(){
-    if(password.value.length>=6){
-       password.style.borderBottomColor = "#56768a";
-        pass_error.style.display="none";
+function password_Verify(){
+    if(pwRegex.test(password.value)){
+        password.style.borderBottomColor = "#56768a";
+        pass_error.style.opacity="0";
         return true;
     }
+    return false;
 }
 

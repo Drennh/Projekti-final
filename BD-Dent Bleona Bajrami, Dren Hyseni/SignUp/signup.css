@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  text-decoration: none;
 }
 .header {
   display: flex;
@@ -26,7 +27,6 @@
 }
 
 .header a {
-  text-decoration: none;
   color: #0068b6;
   font-size: 20px;
   font-weight: 400;
@@ -104,4 +104,51 @@ button:hover {
   font-size: 12px;
   color: #c62828;
   opacity: 0;
+}
+@media only screen and (max-device-width: 414px) {
+  body {
+    width: 100vw;
+  }
+  .header {
+    width: 120vw;
+    height: 100px;
+  }
+  .visibility {
+    display: none;
+  }
+  .booknowbutoni {
+    right: 0;
+    top: 25px;
+  }
+  #logo {
+    margin-left: 10px;
+    width: 65px;
+    height: 50px;
+  }
+  .signupcontent h1 {
+    position: relative;
+    left: ;
+    width: 100%;
+  }
+  .signupcontent input {
+    width: 350px;
+  }
+  .signupdiv {
+    width: 120vw;
+  }
+  .signup {
+    width: 75%;
+    margin: 20px auto;
+  }
+  .signup_form #fullname_error,
+  .signup_form #email_error,
+  .signup_form #phone_error,
+  .signup_form #pass_error {
+    margin-left: 50px;
+  }
+}
+@media only screen and (max-device-width: 750px) {
+  .visibility {
+    display: none;
+  }
 }

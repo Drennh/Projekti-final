@@ -7,42 +7,41 @@
     <title>BD-Dent | Sign Up</title>
 </head>
 <body>
+
     <div class="header">
-        <img id="logo" src="../photos/LOGO3.png" alt="">
+       <a href="../Home/home.php"> <img id="logo" src="../photos/LOGO3.png" alt=""></a>
         <ul>
-            <li><a href="../Home/home.html">Home</a></li>
-            <li><a href="../Services/services.html">Services</a></li>
-            <li><a href="">Contact</a></li>
-            <li ><a href="../Login/login.html">Login</a></li>
-            <a href="../Services book/servicesbook.html"> <button class="booknowbutoni">BOOK NOW</button></a>
+            <li><a class="visibility" href="../Home/home.php">Home</a></li>
+            <li><a class="visibility" href="../Services/services.php">Services</a></li>
+            <li><a class="visibility" href="../contact/contactUs.php">Contact</a></li>
+            <li ><a class="visibility" href="../Login/login.php">Login</a></li>
+            <a class="visibility" href="../Services book/servicesbook.php"> <button class="booknowbutoni">BOOK NOW</button></a>
         </ul>
     </div>
     <div class="signupdiv">
         <div class="signupcontent">
             <h1>Create A Profile</h1>
-            <form class="signup_form" method="post" name="form" onsubmit="return validated()" action="../Login/login.html">
+            <form class="signup_form" name="form" >
 
-            <input type="text" name="name1" id="Name" placeholder="Full Name">
+            <input type="text"  id="Name" placeholder="Full Name" autocomplete="off" >
 
             <div id="fullname_error">Please fill up your Full Name</div>
 
-            <input type="email" name="email" placeholder="Email" name="" id="Email">
+            <input type="email" name="email" placeholder="Email" name="" id="Email" autocomplete="off">
 
             <div id="email_error">Please fill up your Email</div>
-            <input type="tel" placeholder="Phone Numer" name="phone" id="phonenumber"pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
-            required
-            title=" Number must have this form : XXX-XXX-XXX">
+            <input autocomplete="off" type="tel" placeholder="Phone Numer" name="phone" id="phonenumber">
 
             <div id="phone_error">Please fill up your Phone Number</div>
-            <input type="password" placeholder="Password" name="password" id="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            <input autocomplete="off" type="password" placeholder="Password" name="password" id="Password"
              title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
 
             <div id="pass_error">Please fill up your Password</div>
-            <button class="signupbutton" type="submit">CONTINUE</button>
+            <button class="signupbutton" type="button">CONTINUE</button>
             </form>
-            <p class="signup">Your password must be at least 8 characters and contain at least one number and one uppercase and lowercase letter. </p>
+            <p class="signup">Your password must be at least 8 characters and contain at least one number, uppercase letter,lowercase letter and one special character </p>
         </div>
     </div>
-    <script src="signup.js"></script>
+    <script src="signup.js?a"></script>
 </body>
 </html>
