@@ -90,3 +90,59 @@ button {
   color: #c62828;
   opacity: 0;
 }
+@media only screen and (max-device-width: 414px) {
+  body {
+    width: 100vw;
+  }
+  main {
+    width: 100vw;
+  }
+  .leftside {
+    display: none;
+  }
+  .rightside {
+    height: 75vh;
+    width: 90%;
+  }
+  .indiv {
+    width: 100vw;
+  }
+  #butoni {
+    position: relative;
+    width: 80%;
+    right: 20%;
+  }
+  .signup_form #fullname_error,
+  .signup_form #email_error,
+  .signup_form #phone_error,
+  .signup_form #date_error {
+    width: 90%;
+  }
+}
+@media only screen and (min-device-width: 413px) and (max-device-width: 1024px) {
+  .leftside {
+    display: none;
+  }
+  .rightside {
+    width: 90%;
+  }
+  .description {
+    width: 90vw;
+  }
+  .rightside {
+    height: 60vh;
+    top: 70px;
+  }
+  main {
+    height: 80vh;
+  }
+  #butoni {
+    position: relative;
+    width: 40%;
+    left: 30%;
+    height: 50px;
+    font-size: 20px;
+    margin: 0;
+    top: 50px;
+  }
+}
