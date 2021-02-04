@@ -56,3 +56,32 @@ main {
 .description {
   margin-top: 5px;
 }
+@media only screen and (max-device-width: 414px) {
+  body {
+    width: 100vw;
+  }
+  .leftside {
+    display: none;
+  }
+  main {
+    height: 80vh;
+  }
+  .rightside {
+    height: 75vh;
+    width: 90%;
+  }
+  .help {
+    font-size: 35px;
+  }
+  .a {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-device-width: 413px) and (max-device-width: 1024px) {
+  .leftside {
+    display: none;
+  }
+  .rightside {
+    width: 90%;
+  }
+}
