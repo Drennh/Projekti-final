@@ -155,3 +155,110 @@
     }
   }
 }
+@media only screen and (max-device-width: 800px) and (min-device-width: 414px) {
+  video {
+    display: none;
+  }
+  body header {
+    width: 100vw;
+    position: relative;
+    background-image: url(../photos/qika.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+  }
+  #logo {
+    margin-left: 20px;
+  }
+  .navigation {
+    position: fixed;
+    z-index: 2000;
+    height: 75px;
+    background-color: #56768a;
+    width: 100vw;
+  }
+  .lifeisshort {
+    width: 350px;
+  }
+  .main1 {
+    width: 500px;
+  }
+
+  .inspirationaltext h1 {
+    width: 400px;
+    margin-left: -70px;
+    font-size: 35px;
+  }
+  .inspirationaltext p {
+    width: 400px;
+    margin-left: -70px;
+    font-size: 20px;
+  }
+
+  .inspirationaltext {
+    flex-direction: column;
+    height: 130vh;
+    justify-content: space-around;
+  }
+  .ourstaff {
+    flex-direction: column;
+    height: 200vh;
+
+    justify-content: space-evenly;
+  }
+  .headlinetext {
+    font-size: 60px;
+  }
+  .docpic {
+    width: 320px;
+    height: 320px;
+    margin-left: -30px;
+  }
+  .drname {
+    font-size: 50px;
+  }
+  .docdescription {
+    font-size: 20px;
+    margin-left: -70px;
+    width: 400px;
+  }
+  .book {
+    display: flex;
+    flex-direction: column;
+    height: 320vh;
+    width: 100vw;
+  }
+  .smile {
+    width: 50vw;
+    margin-left: 25vw;
+    background-color: white;
+    margin-top: 30px;
+  }
+  .smile img {
+    width: 100%;
+  }
+  .smile h1 {
+    font-size: 45px;
+  }
+  .smile p {
+    font-size: 20px;
+  }
+  .smilebutton {
+    font-size: 20px;
+    width: 200px;
+  }
+
+  .slider {
+    height: 400px;
+  }
+  .arrow3 {
+    display: none;
+  }
+  .leftarrow {
+    top: 22vh;
+  }
+  .rightarrow {
+    top: 22vh;
+    left: 93%;
+  }
+}

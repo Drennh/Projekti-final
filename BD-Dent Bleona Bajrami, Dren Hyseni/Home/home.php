@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="home.css" />
-    <link rel="stylesheet" href="homeResponsive.css?a" />
+    <link rel="stylesheet" href="homeResponsive.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
@@ -77,7 +77,7 @@
           ipsum, dignissimsed est vel, ultricies ornare diam. Donec
         </p>
       </div>
-      <div>
+      <div id="inspirationaltextDIV3">
         <h1>WHY US</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipiscing elit. asd ipsum
