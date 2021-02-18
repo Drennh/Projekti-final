@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="../Footer/footer.css">
+    <link rel="stylesheet" href="signup.css?a">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BD-Dent | Sign Up</title>
@@ -21,27 +22,31 @@
     <div class="signupdiv">
         <div class="signupcontent">
             <h1>Create A Profile</h1>
-            <form class="signup_form" name="form" >
+            <form action="../UsersMapper/signupverify.php" method="POST" class="signup_form" name="form" >
 
-            <input type="text"  id="Name" placeholder="Full Name" autocomplete="off" >
+            <input type="text" name="signup-name"  id="Name" placeholder="Full Name" autocomplete="off" >
 
             <div id="fullname_error">Please fill up your Full Name</div>
 
-            <input type="email" name="email" placeholder="Email" name="" id="Email" autocomplete="off">
+            <input type="email" name="signup-email" placeholder="Email" name="" id="Email" autocomplete="off">
 
             <div id="email_error">Please fill up your Email</div>
-            <input autocomplete="off" type="tel" placeholder="Phone Numer" name="phone" id="phonenumber">
+            <input autocomplete="off" type="tel" placeholder="Phone Numer" name="singup-phonenumber" id="phonenumber">
 
             <div id="phone_error">Please fill up your Phone Number</div>
-            <input autocomplete="off" type="password" placeholder="Password" name="password" id="Password"
+            <input autocomplete="off" type="password" placeholder="Password" name="signup-password" id="Password"
              title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
 
             <div id="pass_error">Please fill up your Password</div>
-            <button class="signupbutton" type="button">CONTINUE</button>
+            <button name="signup-button" class="signupbutton" type="submit">CONTINUE</button>
             </form>
             <p class="signup">Your password must be at least 8 characters and contain at least one number, uppercase letter,lowercase letter and one special character </p>
         </div>
     </div>
+
+    <?php
+                        include '../Footer/footer.php'
+                        ?>
     <script src="signup.js?a"></script>
 </body>
 </html>
