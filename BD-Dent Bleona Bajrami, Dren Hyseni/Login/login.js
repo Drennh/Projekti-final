@@ -1,5 +1,5 @@
 const emailRegex = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
-const pwRegex=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+const pwRegex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 
 
 const email = document.querySelector('#email');
@@ -24,7 +24,7 @@ function validimi(){
     } 
     
     if(email_Verify() && password_Verify()) {
-        window.location.href = "http://localhost/Projekti-final/BD-Dent%20Bleona%20Bajrami,%20Dren%20Hyseni/Home/home.php";
+        window.location.href = "http://localhost/projekti-final-Database/BD-Dent%20Bleona%20Bajrami,%20Dren%20Hyseni/Login/loginverify.php";
     } 
 }
 function email_Verify(){

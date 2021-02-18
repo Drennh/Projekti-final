@@ -54,7 +54,7 @@ a:hover {
 }
 .logindiv {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -124,6 +124,9 @@ button:hover {
   height: 3px;
   background-color: white;
   margin: 5px;
+}
+.footerDent {
+  background-color: #56768a;
 }
 
 @media only screen and (max-device-width: 414px) {
@@ -219,5 +222,11 @@ button:hover {
       opacity: 1;
       transform: translateX(0px);
     }
+  }
+
+  .footerDent {
+    top: 90vh;
+    position: absolute;
+    background-color: #56768a;
   }
 }
