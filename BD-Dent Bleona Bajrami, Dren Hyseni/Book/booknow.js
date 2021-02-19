@@ -22,7 +22,7 @@ tl.fromTo(booknow,1, {x:"+10%",opacity:0}, {x:"0%",opacity:1, ease:Power2.easeIn
 var name1 = document.forms['form']['name1'];
 var phone = document.forms['form']['phone'];
 var email = document.forms['form']['email'];
-var data = document.forms['form']['Book Date'];
+var data = document.forms['form']['date'];
 
 var fullname_error = document.getElementById('fullname_error');
 var phone_error = document.getElementById('phone_error');

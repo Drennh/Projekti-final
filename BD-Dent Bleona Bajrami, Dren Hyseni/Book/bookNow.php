@@ -1,3 +1,11 @@
+<?php
+    session_start();
+  
+
+    if(!isset($_SESSION['role'])){
+        header("Location:../Login/login.php");
+    }  
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +18,7 @@
 </head>
 <body>
     <header>
-        <a href="../Home/home.html"> <img id="logo" src="../photos/LOGO3.png" alt=""></a> 
+        <a href="../Home/home.php"> <img id="logo" src="../photos/LOGO3.png" alt=""></a> 
       </header>
       
       <main>
@@ -19,7 +27,7 @@
           </div>
           <div class="rightside">
             <h1 class="booknow">Book Now</h1>
-            <form class="signup_form" method="post" name="form" onsubmit="return validated()" action="../Login/login.html">
+            <form class="signup_form" method="post" name="form" onsubmit="return validated()" action="../BookMapper/bookNowVerify.php">
            <div class="indiv" id="div1">
 
 
@@ -28,9 +36,7 @@
             </div>
             <!--Different Div-->
             <div class="indiv" id="div2">
-               <input class="description" type="tel" name="phone" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
-               required
-               title=" Number must have this form : XXX-XXX-XXX">
+               <input class="description" type="tel" name="phone" placeholder="Phone Number" >
                <div id="phone_error">Please fill up your Phone Number</div>
                 </div>
                 <!--Different Div-->
@@ -42,18 +48,18 @@
                     <!--Different Div-->
                    <div class="indiv" id="div4">
 
-                    <input class="description" type="date" id="start" name="trip-start" required pattern="\d{4}-\d{2}-\d{2}"
+                    <input class="description" type="date" id="start" name="date" pattern="\d{4}-\d{2}-\d{2}"
                    
                     min="2021-01-01" max="2023-12-31">
              
                         <div id="date_error">Please fill up the date you want to book</div> 
                       
                         </div>
-                      <button id="butoni" type="submit">Book Now</button>
+                      <button id="butoni" name="book-button" type="submit">Book Now</button>
                      </form>
                      
         </div>
       </main>
-    <script src="booknow.js"></script>
+   <!-- <script src="booknow.js"></script> !-->
 </body>
 </html>
