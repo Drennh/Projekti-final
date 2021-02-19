@@ -1,6 +1,10 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="../Footer/footer.css" />
     <link rel="stylesheet" href="contactUs.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -14,7 +18,7 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>BD-Dent | Contact Us</title>
   </head>
   <body>
     <div class="header">
@@ -28,11 +32,18 @@
           <a class="NavLinks"class="visibility"href="../Services/services.php">Services</a>
         </li>
         <li><a class="NavLinks" class="visibility" href="">Contact</a></li>
-        <li>
-          <a class="NavLinks" class="visibility" href="../Login/login.php"
-            >Login</a
-          >
-        </li>
+        <?php
+
+if(!isset($_SESSION['role'])){
+
+  ?> <li><a class="NavLinks" href="../Login/login.php">Login</a></li> <?php
+}
+else if(isset($_SESSION['role'])){
+  
+ ?> <li><a class="NavLinks" href="../logOut/logOut.php">Log Out</a></li> <?php
+         
+}
+?>
         <a class="visibility" href="../Services book/servicesbook.php">
           <button class="booknowbutoni">BOOK NOW</button></a
         >
@@ -49,12 +60,12 @@
       <div class="contactcontent">
         <h1>Contact Us</h1>
 
-        <form class="contactUs_form">
-          <input  type="text"   id="Name"  placeholder="Your Name" autocomplete="off" />
+        <form action="../MessagesMapper/contactUsVerify.php" method="POST" class="contactUs_form">
+          <input  type="text"   id="Name" name="contact-name"  placeholder="Your Name" autocomplete="off" />
 
           <div id="fullname_error">Please fill up your Full Name</div>
 
-          <input name="email" placeholder="Your Email" id="Email"autocomplete="off"/>
+          <input name="contact-email" placeholder="Your Email" id="Email"autocomplete="off"/>
 
           <div id="email_error">Please fill up your Email</div>
 
@@ -64,11 +75,15 @@
             Your message must contain at least 10 letters
           </div>
 
-          <button class="contactusbutton" type="button">CONTINUE</button>
+          <button class="contactusbutton" name="contact-button" type="submit">CONTINUE</button>
         </form>
       </div>
 
     </div>
+
+    <?php
+        include '../Footer/footer.php'
+    ?>
     <script src="contactUs.js"></script>
     <script src="../Burger js/burger.js"></script>
   </body>

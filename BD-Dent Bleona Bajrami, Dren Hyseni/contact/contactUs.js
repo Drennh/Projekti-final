@@ -26,7 +26,7 @@ function validated(){
   }
   
   else {
-    alert('Email sent. Thank you for your feedback');
+   // alert('Email sent. Thank you for your feedback');
 } 
 }
 
