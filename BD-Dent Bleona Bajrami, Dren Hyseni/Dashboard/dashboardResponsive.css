@@ -1,0 +1,87 @@
+@media only screen and (max-device-width: 414px) {
+  body {
+    overflow-x: hidden;
+  }
+  header {
+    width: 100vw;
+  }
+  .navigationlinks {
+    margin-left: 70px;
+    width: 200px;
+  }
+  #usersinformations {
+    width: 100vw;
+    width: 100vw;
+    position: relative;
+    left: 0px;
+    top: 70px;
+  }
+  .usersicon,
+  .resicon,
+  .messageicon {
+    width: 30px;
+    height: 30px;
+  }
+  .userbox,
+  .reservationsbox,
+  .messagebox {
+    flex-direction: column;
+  }
+  #usersinformationheader {
+    width: 200px;
+    margin-left: 0px;
+  }
+
+  #addsomething {
+    width: 100vw;
+    position: absolute;
+    left: 0px;
+    margin-top: 120px;
+  }
+  .addContent {
+    position: relative;
+    top: 0vh;
+    left: 70px;
+  }
+  #homePageBox,
+  .bookServicesPage {
+    font-size: 10px;
+  }
+  #homepageDoctorinformation,
+  #homepageMarketinginformation {
+    margin-left: 0px;
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-device-width: 800px) and (min-device-width: 414px) {
+  #logo1 {
+    margin-top: 30px;
+  }
+
+  .navigationlinks {
+    position: relative;
+    top: 30px;
+    left: 250px;
+  }
+  #usersinformations {
+    width: 100vw;
+    position: relative;
+    left: 0px;
+    top: 70px;
+  }
+  #addsomething {
+    width: 100vw;
+    position: absolute;
+    left: 0px;
+    margin-top: 120px;
+  }
+  .addhere {
+    margin-top: 0px;
+  }
+  .addContent {
+    position: absolute;
+    top: 70vh;
+    left: 260px;
+  }
+}
