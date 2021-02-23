@@ -1,6 +1,19 @@
+<?php
+  session_start();
+  include_once '../DashboardMapper/addMapper.php';
+  $fileAdded= new AddMapper();
+  $fileAddedList=$fileAdded->getAllAdds();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+  <link rel="stylesheet" href="home.css?a" />
+    <link rel="stylesheet" href="homeResponsive.css" />
+    <link rel="stylesheet" href="../Footer/footer.css" />
+
+
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
@@ -11,8 +24,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="home.css" />
-    <link rel="stylesheet" href="homeResponsive.css" />
+   
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
@@ -29,6 +41,15 @@
         <source src="../photos/girlVid.mp4" type="video/mp4" />
        
       </video>
+    <?php
+      if(isset($_SESSION['role'])&&$_SESSION['role']==1){
+    
+
+       ?> <a href="../Dashboard/dashboard.php"> <button id="DashboardButton">DASHBOARD</button></a><?php
+
+      }
+    ?>
+
       
       <div class="navigation">
         <img id="logo" src="../photos/LOGO2.png" alt="" />
@@ -38,7 +59,19 @@
             <a class="NavLinks" href="../Services/services.php">Services</a>
           </li>
           <li><a class="NavLinks" href="../contact/contactUs.php">Contact</a></li>
-          <li><a class="NavLinks" href="../Login/login.php">Login</a></li>
+        <?php
+
+          if(!isset($_SESSION['role'])){
+
+            ?> <li><a class="NavLinks" href="../Login/login.php">Login</a></li> <?php
+          }
+          else if(isset($_SESSION['role'])){
+            
+           ?> <li><a class="NavLinks" href="../logOut/logOut.php">Log Out</a></li> <?php
+                   
+          }
+        ?>
+          
         </ul>
         <div class="burger">
           <div class="line"></div>
@@ -50,9 +83,10 @@
       <div class="main1">
         <h1 class="lifeisshort">Life is short</h1>
         <h2 class="smilewhile">
-          <span class="smile">Smile </span>
+          <span class="smiletxt">Smile </span>
           <span class="whileyouhave">while you still have teeth</span>
         </h2>
+        
         <a href="../Services book/servicesbook.php">
           <button class="butoni1">Book now</button>
         </a>
@@ -66,29 +100,26 @@
       <div>
         <h1>BRUSH YOUR TEETH</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. asd ipsum
-          ipsum, dignissimsed est vel, ultricies ornare diam. Donec
+        Brushing ensures the removal of plaque, which is the primary cause for tooth decay and gum disease;
+         it also arrests the build-up of any plaque formation.
         </p>
       </div>
       <div>
         <h1>VISIT DENTIST</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. asd ipsum
-          ipsum, dignissimsed est vel, ultricies ornare diam. Donec
+        For most people, dentists recommend having a cleaning and checkup twice a year – every six months, to be precise.
         </p>
       </div>
       <div id="inspirationaltextDIV3">
         <h1>WHY US</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. asd ipsum
-          ipsum, dignissimsed est vel, ultricies ornare diam. Donec
+        We want you to feel amazing about your oral wellness. Not just twice a year, but every time you take a bite, tell a joke, laugh, or share a kiss.
         </p>
       </div>
       <div>
-        <h1>LOREM IPSUM</h1>
+        <h1>SEE YOU SMILE</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. asd ipsum
-          ipsum, dignissimsed est vel, ultricies ornare diam. Donec
+        We’re passionate about helping you experience a beautiful and healthy smile. You can expect gentle and compassionate care with precision excellence
         </p>
       </div>
     </div>
@@ -127,30 +158,19 @@
       <div class="headline">
         <h1 class="headlinetext">Our Staff</h1>
       </div>
-      <div class="doctor1">
-        <img class="docpic" src="../photos/doc1.png" alt="" />
-        <h1 class="drname">Dr.Emer</h1>
-        <p class="docdescription">
-          Lorem ipsum dolor sitamet consectetur adipisicing elit. Accusantium
-          fugit dolore maiores illo dignissimos eaque.
-        </p>
-      </div>
-      <div class="doctor2">
-        <img class="docpic" src="../photos/doc2.png" alt="" />
-        <h1 class="drname">Dr.Emer</h1>
-        <p class="docdescription">
-          Lorem ipsum dolor sitamet consectetur adipisicing elit. Accusantium
-          fugit dolore maiores illo dignissimos eaque.
-        </p>
-      </div>
-      <div class="doctor3">
-        <img class="docpic" src="../photos/doc3.png" alt="" />
-        <h1 class="drname">Dr.Emer</h1>
-        <p class="docdescription">
-          Lorem ipsum dolor sitamet consectetur adipisicing elit. Accusantium
-          fugit dolore maiores illo dignissimos eaque.
-        </p>
-      </div>
+
+      <?php
+                foreach ($fileAddedList as $files) {
+
+                  if($files['addtype']=='doctor'){?>
+                   <div class="doctor">
+                   <img class="docpic" src="../photos/<?php echo $files['image']; ?>">
+                   <h1 class="drname"><?php echo $files['headtext']; ?></h1>
+                   <p class="docdescription"><?php echo $files['description']; ?></p>
+                   </div>
+                   <?php
+                   }
+                  }?>
     </div>
     <!--MBARIMI OUR STAFF FOTOT DHE TEKSTI-->
 
@@ -164,40 +184,26 @@
     <!--MBARIMI I DIVIT PER SHIGJETEN3 SCROLL-->
 
     <!--FILLIMI BOOK NOW FOTOT DHE TEKSIT-->
+                
     <div class="book" id="booksection">
-      <div class="smile">
-        <img src="../photos/smile0.png" alt="" />
-        <h1>Checkup</h1>
-        <p>Fillings, implants, crowns, and more.</p>
-        <a href="../Services book/servicesbook.php">
-          <button class="smilebutton">BOOK</button></a
-        >
-      </div>
-      <div class="smile">
-        <img src="../photos/smile1.png" alt="" />
-        <h1>Checkup</h1>
-        <p>Fillings, implants, crowns, and more.</p>
-        <a href="../Services book/servicesbook.php">
-          <button class="smilebutton">BOOK</button></a
-        >
-      </div>
-      <div class="smile">
-        <img src="../photos/smile2.png" alt="" />
-        <h1>Checkup</h1>
-        <p>Fillings, implants, crowns, and more.</p>
-        <a href="../Services book/servicesbook.php">
-          <button class="smilebutton">BOOK</button></a
-        >
-      </div>
-      <div class="smile">
-        <img src="../photos/smile3.png" alt="" />
-        <h1>Checkup</h1>
-        <p>Fillings, implants, crowns, and more.</p>
-        <a href="../Services book/servicesbook.php">
-          <button class="smilebutton">BOOK</button></a
-        >
-      </div>
+    <?php
+                foreach ($fileAddedList as $files) {
+
+                  if($files['addtype']=='marketing'){?>
+
+                        <div class="smile">
+                        <img src="../photos/<?php echo $files['image']; ?>">
+                        <h1><?php echo $files['headtext']; ?></h1>
+                        <p><?php echo $files['description']; ?></p>
+                        <a href="../Services book/servicesbook.php">
+                          <button class="smilebutton">BOOK</button></a>
+        
+                        </div>
+                        <?php
+                        }
+                    }?>
     </div>
+    
     <!--FILLIMI BOOK NOW FOTOT DHE TEKSIT-->
 
     <!--FILLIMI I DIVIT PER SHIGJETEN4 SCROLL-->
@@ -222,7 +228,10 @@
            
         </div>
     </div>
-
+                  <?php
+                        include '../Footer/footer.php'
+                        ?>
+                   
     <script src="home.js"></script>
     <script src="../Burger js/burger.js"></script>
   </body>

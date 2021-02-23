@@ -1,5 +1,5 @@
 const lifeisshort = document.querySelector('.lifeisshort');
-const smile = document.querySelector('.smile');
+const smile = document.querySelector('.smiletxt');
 const whileyouhave = document.querySelector('.whileyouhave');
 const butoni1 = document.querySelector('.butoni1');
 const goto = document.querySelector('.goto');

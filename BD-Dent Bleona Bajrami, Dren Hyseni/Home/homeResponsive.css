@@ -17,6 +17,10 @@
     position: fixed;
     z-index: 100;
   }
+  #DashboardButton {
+    width: 100px;
+    left: 270px;
+  }
 
   .nav-Links {
     position: absolute;
@@ -182,6 +186,11 @@
   }
   .main1 {
     width: 500px;
+  }
+  #DashboardButton {
+    width: 200px;
+    left: 550px;
+    font-size: 20px;
   }
 
   .inspirationaltext h1 {
