@@ -10,13 +10,28 @@
 #MessagesTable,
 #ReservationsTable {
   border-collapse: collapse;
-  width: 100%;
+}
+.buttons-events {
+  margin-right: 20px;
+}
+.edit-row {
+  margin-top: 10px;
 }
 #logo1 {
   width: 50px;
   position: absolute;
   right: 25px;
   top: 25px;
+}
+.event-form {
+  position: relative;
+  cursor: pointer;
+}
+
+.cancel-edit {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 td,
 th {
@@ -41,7 +56,11 @@ td button {
   cursor: pointer;
 }
 #UserDelButton:hover,
-#cancelReservation:hover {
+#cancelReservation:hover,
+#cancelMessage:hover,
+#deleteDoctor:hover,
+#deleteMarketing:hover,
+#deleteInspirational:hover {
   background-color: rgb(247, 77, 77);
 }
 #EditButton:hover {
@@ -54,6 +73,10 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.event-id {
+  display: none;
 }
 
 nav {
@@ -183,12 +206,14 @@ nav {
   width: 100%;
 }
 #homepageDoctorinformation,
-#homepageMarketinginformation {
+#homepageMarketinginformation,
+#homepageInspirationalinformation {
   border-collapse: collapse;
   margin-left: 30px;
 }
 #homepageDoctorinformation,
-#homepageMarketinginformation {
+#homepageMarketinginformation,
+#homepageInspirationalinformation {
   margin-top: 50px;
   width: 95%;
 }
