@@ -69,7 +69,7 @@ else if(isset($_SESSION['role'])){
 
           <div id="email_error">Please fill up your Email</div>
 
-          <!-- <input type="text" placeholder="Your Message" id="message" autocomplete="off" /> -->
+      
           <textarea name="message" id="message" rows="5" maxlength="300" placeholder="Your Message Here"></textarea>
           <div id="message_error">
             Your message must contain at least 10 letters

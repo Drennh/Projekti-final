@@ -9,7 +9,7 @@
   display: flex;
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 100vw;
 }
 .booknowbutoni {
   width: 100px;
@@ -134,7 +134,7 @@ button:hover {
   margin: 5px;
 }
 
-@media only screen and (max-device-width: 414px) {
+@media only screen and (max-device-width: 800px) {
   body {
     width: 100vw;
   }

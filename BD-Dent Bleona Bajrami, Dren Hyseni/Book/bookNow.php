@@ -60,6 +60,6 @@
                      
         </div>
       </main>
-   <!-- <script src="booknow.js"></script> !-->
+    <script src="booknow.js"></script> 
 </body>
 </html>

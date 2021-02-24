@@ -13,14 +13,18 @@ buttoni.addEventListener('click',validimi);
 email.addEventListener('input',email_Verify);
 pass.addEventListener('input',password_Verify);
 
-function validimi(){
+
+
+function validimi(event){
     if(email.value==''||!emailRegex.test(email.value)){
         email.style.borderBottomColor = "red";
         email_error.style.opacity="1";
+        event.preventDefault();
     }
     if(pass.value==''||!pwRegex.test(pass.value)){
         pass.style.borderBottomColor = "red";
         pass_error.style.opacity="1";
+
     } 
     
     if(email_Verify() && password_Verify()) {
